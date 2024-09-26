@@ -1,0 +1,146 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  /* color: #FFFF55; */
+  font-size: 2rem;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    background-color: rgb(40, 40, 40);
+}
+.container{
+    padding-top: 3em;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    /* border: 2px solid black; */
+    background: rgb(10,0,186);
+    background: linear-gradient(328deg, rgba(10,0,186,1) 0%, rgba(240,255,244,1) 100%);
+    border-radius: 5px;
+
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+}
+input{
+    width: 60%;
+    height: 3em;
+    border-radius: 5px;
+    background: white;
+    border: 3px solid white;
+    font-size: 1.2em;
+    padding-left: 1em;
+    outline: 0;
+}
+
+button{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em .9em;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    transition: .3s linear;
+}
+button:hover{
+    background: rgb(255, 240, 180);
+}
+.app-center-body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 2em;
+
+}
+.app-center-body span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-center-body-right{
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-start;
+    position: relative;
+
+}
+.app-center-body-right p:nth-child(2){
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 1em;
+    font-family: "Orbitron";
+}
+.app-center-body-right p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: absolute;
+    margin-top: 35px;
+ 
+}
+.main-weather-icon{
+    font-size:6.5rem;
+    color: yellow;
+}
+.app-bottom-body{
+    padding-top: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}
+
+.description{
+    font-size: 1.2em;
+    color: rgb(212, 212, 212);
+    margin-top: -9px;
+}
+.weather-description{
+    font-size: 1em;
+    color: rgb(213, 213, 213);
+    position: absolute;
+    bottom: 1em;
+
+}
+.left-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+
+}
+.left-left span{
+    font-size: 2.5rem;
+    color: rgb(217, 217, 217);
+    font-weight: 300;
+}
+.left-left p{
+    font-size: 1.1em;
+    color: white;
+} 
