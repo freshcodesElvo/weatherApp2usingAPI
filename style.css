@@ -54,6 +54,7 @@ input{
     font-size: 1.2em;
     padding-left: 1em;
     outline: 0;
+    transition: .4s linear;
 }
 
 button{

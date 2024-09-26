@@ -8,10 +8,24 @@ let user_input = document.querySelector("input");
 let enter_btn = document.querySelector("button");
 let weather_icon = document.querySelector(".main-weather-icon") 
 let weather_description = document.querySelector(".weather-description");
-
+let error_body;
 
 async function check_weather(city) {
     const response = await fetch(api_url + city + `&appid=${api_key}`);
+    if(response.status == 404) {
+     
+        error_body = document.createElement("div");
+        error_body.classList.add("error-message");
+        error_body.innerHTML = 
+        `
+        <p style = "color: black"> ${user_input.value} is not a valid city, try again</P>
+        `
+        document.querySelector("nav").appendChild(error_body);
+        document.querySelector("main").style.display = "none";
+        return;
+    }   
+    else{
+    
     let data = await response.json();
     console.log(data)
 
@@ -37,10 +51,28 @@ async function check_weather(city) {
     else if(data.weather[0].main == "Mist"){
         weather_icon.src = `images/mist.png`
     }
- 
+    
+
+    error_body.style.display = "none";
+    document.querySelector("main").style.display = "block";
+ }
 }
 enter_btn.addEventListener("click", ()=>{
-    check_weather(user_input.value)
+    if(user_input.value == ""){
+        alert("Please enter a city name")
+        return;
+    }
+    else{
+        check_weather(user_input.value)
+
+        setTimeout(() => {
+            user_input.value = '';
+        }, 3000);
+        
+
+    }
+    
+    
 
 })
 let geocode = {
@@ -79,7 +111,8 @@ let geocode = {
       // Success!
       var data = JSON.parse(request.responseText);
       console.log(); // print the location
-      check_weather(data.results[0].components.city)
+     // check_weather(data.results[0].components.city)
+      check_weather("nairobi")
       
 
     } else if (request.status <= 500){
@@ -115,3 +148,5 @@ let geocode = {
     }
 }
 geocode.get_location();
+
+
