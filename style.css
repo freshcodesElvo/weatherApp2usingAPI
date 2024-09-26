@@ -17,6 +17,10 @@ body{
     box-sizing: border-box;
     font-family: "Poppins";
     background-color: rgb(40, 40, 40);
+    background: url("https://images.unsplash.com/photo-1712698215157-a3fcd3e69348?q=80&w=1834&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .container{
     padding-top: 3em;

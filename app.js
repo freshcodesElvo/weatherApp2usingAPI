@@ -110,7 +110,7 @@ let geocode = {
         if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(success, console.error);
         } else {
-            console.log('Geolocation is not supported by this browser.');
+            check_weather("Nairobi")
         }
     }
 }
