@@ -111,7 +111,7 @@ let geocode = {
       // Success!
       var data = JSON.parse(request.responseText);
       console.log(); // print the location
-     // check_weather(data.results[0].components.city)
+     //check_weather(data.results[0].components.city)
       check_weather("nairobi")
       
 
@@ -133,8 +133,6 @@ let geocode = {
 
   request.send();  // make the request
 
-
-         
     },
     get_location: function() {
         function success(data) {
